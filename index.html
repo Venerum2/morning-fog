@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MORNING FOG — авторский кофе и уютная атмосфера в самом сердце Петербурга. Невский проспект, 48." />
+  <title>MORNING FOG — Кофейня в Санкт-Петербурге</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- КАСТОМНЫЙ КУРСОР -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ═══ НАВИГАЦИЯ ═══ -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#hero" class="navbar__logo">
+        <span class="navbar__logo-icon">☕</span>
+        <span class="navbar__logo-text">MORNING FOG</span>
+      </a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Основная навигация">
+        <ul class="nav-menu__list">
+          <li><a href="#about"      class="nav-menu__link">О нас</a></li>
+          <li><a href="#menu"       class="nav-menu__link">Меню</a></li>
+          <li><a href="#atmosphere" class="nav-menu__link">Атмосфера</a></li>
+          <li><a href="#contacts"   class="nav-menu__link">Контакты</a></li>
+        </ul>
+        <a href="#contacts" class="btn btn--cta nav-menu__cta">Забронировать стол</a>
+      </nav>
+      <div class="nav-overlay" id="navOverlay"></div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" id="heroBg"
+           style="background-image:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600&q=80')">
+      </div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <p class="hero__pretitle animate-hero" style="animation-delay:.2s">
+          Санкт-Петербург · С 2019 года
+        </p>
+        <h1 class="hero__title animate-hero" style="animation-delay:.4s">
+          Начни утро<br>правильно
+        </h1>
+        <p class="hero__subtitle animate-hero" style="animation-delay:.6s">
+          Авторский кофе и уютная атмосфера<br>в самом сердце Петербурга
+        </p>
+        <div class="hero__actions animate-hero" style="animation-delay:.8s">
+          <a href="#menu"     class="btn btn--primary">Смотреть меню</a>
+          <a href="#contacts" class="btn btn--outline-light">Найти нас</a>
+        </div>
+      </div>
+      <div class="hero__scroll-indicator">
+        <span class="hero__scroll-text">Прокрутите вниз</span>
+        <div class="hero__scroll-arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ О НАС ═══ -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__image-wrap reveal">
+            <div class="about__image-frame">
+              <img
+                src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=80"
+                alt="Бариста MORNING FOG готовит кофе"
+                class="about__image" loading="lazy"/>
+              <div class="about__image-badge">
+                <span class="about__image-badge-icon">☕</span>
+                <span>С 2019</span>
+              </div>
+            </div>
+          </div>
+          <div class="about__content">
+            <p class="section__pretitle reveal" style="--delay:.1s">Наша история</p>
+            <h2 class="section__title reveal" style="--delay:.2s">История туманного утра</h2>
+            <p class="about__text reveal" style="--delay:.3s">
+              MORNING FOG открылась в 2019 году как маленькое убежище от городской суеты.
+              Мы верим, что правильный кофе способен изменить настроение целого дня.
+              Каждая чашка — это ручная работа наших бариста, обученных в лучших
+              школах Петербурга и Европы.
+            </p>
+            <div class="about__facts">
+              <div class="about__fact reveal" style="--delay:.1s">
+                <div class="about__fact-icon">☕</div>
+                <div class="about__fact-info">
+                  <strong>5 лет</strong><span>опыта</span>
+                </div>
+              </div>
+              <div class="about__fact reveal" style="--delay:.2s">
+                <div class="about__fact-icon">🌱</div>
+                <div class="about__fact-info">
+                  <strong>Прямая</strong><span>обжарка зерна</span>
+                </div>
+              </div>
+              <div class="about__fact reveal" style="--delay:.3s">
+                <div class="about__fact-icon">❤️</div>
+                <div class="about__fact-info">
+                  <strong>50 000+</strong><span>довольных гостей</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ МЕНЮ ═══ -->
+    <section class="menu-section section section--alt" id="menu">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="section__pretitle">Что мы готовим</p>
+          <h2 class="section__title">Наше меню</h2>
+          <p class="section__desc">Каждый напиток — результат любви к кофе и многолетнего опыта</p>
+        </div>
+        <div class="menu__grid">
+          <article class="menu-card reveal" style="--delay:.1s">
+            <div class="menu-card__icon">☕</div>
+            <h3 class="menu-card__name">Капучино</h3>
+            <p class="menu-card__desc">Классический итальянский, идеальный баланс эспрессо и молочной пены</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__price">280 ₽</span>
+              <button class="menu-card__btn" aria-label="Заказать капучино">Заказать</button>
+            </div>
+          </article>
+          <article class="menu-card reveal" style="--delay:.2s">
+            <div class="menu-card__icon">🥛</div>
+            <h3 class="menu-card__name">Латте</h3>
+            <p class="menu-card__desc">Нежный и мягкий, с шелковистой молочной текстурой</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__price">300 ₽</span>
+              <button class="menu-card__btn" aria-label="Заказать латте">Заказать</button>
+            </div>
+          </article>
+          <article class="menu-card reveal" style="--delay:.3s">
+            <div class="menu-card__icon">✨</div>
+            <h3 class="menu-card__name">Раф</h3>
+            <p class="menu-card__desc">Авторский петербургский рецепт с ванилью и сливками</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__price">340 ₽</span>
+              <button class="menu-card__btn" aria-label="Заказать раф">Заказать</button>
+            </div>
+          </article>
+          <article class="menu-card reveal" style="--delay:.4s">
+            <div class="menu-card__icon">🫗</div>
+            <h3 class="menu-card__name">Фильтр</h3>
+            <p class="menu-card__desc">Одиночное происхождение, раскрывает все оттенки вкуса зерна</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__price">250 ₽</span>
+              <button class="menu-card__btn" aria-label="Заказать фильтр-кофе">Заказать</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ АТМОСФЕРА ═══ -->
+    <section class="atmosphere section" id="atmosphere">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="section__pretitle">Наше пространство</p>
+          <h2 class="section__title">Атмосфера</h2>
+          <p class="section__desc">Место, куда хочется возвращаться снова и снова</p>
+        </div>
+        <div class="atmosphere__grid">
+          <div class="atmosphere__item atmosphere__item--large reveal" style="--delay:.1s">
+            <div class="atmosphere__img-wrap">
+              <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80"
+                   alt="Интерьер кофейни MORNING FOG" loading="lazy"/>
+            </div>
+          </div>
+          <div class="atmosphere__item atmosphere__item--large reveal" style="--delay:.2s">
+            <div class="atmosphere__img-wrap">
+              <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80"
+                   alt="Уютный зал с тёплым освещением" loading="lazy"/>
+            </div>
+          </div>
+          <div class="atmosphere__item reveal" style="--delay:.3s">
+            <div class="atmosphere__img-wrap">
+              <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=80"
+                   alt="Чашка кофе на столике" loading="lazy"/>
+            </div>
+          </div>
+          <div class="atmosphere__item reveal" style="--delay:.4s">
+            <div class="atmosphere__img-wrap">
+              <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=400&q=80"
+                   alt="Утренний вид из окна кофейни" loading="lazy"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ОТЗЫВЫ ═══ -->
+    <section class="reviews section section--alt" id="reviews">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="section__pretitle">Что говорят гости</p>
+          <h2 class="section__title">Отзывы</h2>
+        </div>
+        <div class="reviews__slider" id="reviewsSlider">
+          <div class="reviews__track" id="reviewsTrack">
+            <article class="review-card">
+              <div class="review-card__quote">&ldquo;</div>
+              <p class="review-card__text">
+                Лучший раф в городе! Захожу каждое утро перед работой.
+                Персонал всегда встречает с улыбкой — это дорогого стоит.
+              </p>
+              <div class="review-card__stars" aria-label="5 звёзд из 5">⭐⭐⭐⭐⭐</div>
+              <div class="review-card__author">
+                <div class="review-card__avatar" aria-hidden="true">МК</div>
+                <div class="review-card__author-info">
+                  <strong>Мария К.</strong><span>Постоянный гость</span>
+                </div>
+              </div>
+            </article>
+            <article class="review-card">
+              <div class="review-card__quote">&ldquo;</div>
+              <p class="review-card__text">
+                Открыл для себя фильтр-кофе именно здесь. Теперь понимаю,
+                как много теряют любители только эспрессо!
+              </p>
+              <div class="review-card__stars" aria-label="5 звёзд из 5">⭐⭐⭐⭐⭐</div>
+              <div class="review-card__author">
+                <div class="review-card__avatar" aria-hidden="true">ИВ</div>
+                <div class="review-card__author-info">
+                  <strong>Игорь В.</strong><span>Любитель спешелти</span>
+                </div>
+              </div>
+            </article>
+            <article class="review-card">
+              <div class="review-card__quote">&ldquo;</div>
+              <p class="review-card__text">
+                Уютнейшее место в Петербурге. Прихожу сюда работать
+                с ноутбуком — и время летит незаметно.
+              </p>
+              <div class="review-card__stars" aria-label="5 звёзд из 5">⭐⭐⭐⭐⭐</div>
+              <div class="review-card__author">
+                <div class="review-card__avatar" aria-hidden="true">СМ</div>
+                <div class="review-card__author-info">
+                  <strong>Светлана М.</strong><span>Фрилансер</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="reviews__nav">
+            <button class="reviews__nav-btn" id="reviewsPrev" aria-label="Предыдущий отзыв">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M15 18l-6-6 6-6" stroke="currentColor"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="reviews__dots" id="reviewsDots"></div>
+            <button class="reviews__nav-btn" id="reviewsNext" aria-label="Следующий отзыв">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M9 18l6-6-6-6" stroke="currentColor"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ КОНТАКТЫ ═══ -->
+    <section class="contacts section" id="contacts">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="section__pretitle">Мы здесь</p>
+          <h2 class="section__title">Контакты</h2>
+        </div>
+        <div class="contacts__grid">
+          <!-- Информация -->
+          <div class="contacts__info reveal" style="--delay:.1s">
+            <h3 class="contacts__info-title">Как нас найти</h3>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <span class="contacts__item-icon" aria-hidden="true">📍</span>
+                <div>
+                  <strong>Адрес</strong>
+                  <span>Невский проспект, 48,<br>Санкт-Петербург</span>
+                </div>
+              </li>
+              <li class="contacts__item">
+                <span class="contacts__item-icon" aria-hidden="true">🕗</span>
+                <div>
+                  <strong>Режим работы</strong>
+                  <span>8:00 — 23:00, без выходных</span>
+                </div>
+              </li>
+              <li class="contacts__item">
+                <span class="contacts__item-icon" aria-hidden="true">📞</span>
+                <div>
+                  <strong>Телефон</strong>
+                  <a href="tel:+78121234567">+7 (812) 123-45-67</a>
+                </div>
+              </li>
+              <li class="contacts__item">
+                <span class="contacts__item-icon" aria-hidden="true">📧</span>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:hello@morningfog.spb.ru">hello@morningfog.spb.ru</a>
+                </div>
+              </li>
+            </ul>
+            <div class="contacts__social">
+              <p class="contacts__social-title">Мы в соцсетях</p>
+              <div class="contacts__social-links">
+                <a href="#" class="social-link" aria-label="Instagram MORNING FOG">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058
+                    1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664
+                    4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849
+                    0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057
+                    1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073
+                    7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78
+                    6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2
+                    6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014
+                    15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0
+                    000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100
+                    2.881 1.44 1.44 0 000-2.881z"/>
+                  </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Telegram MORNING FOG">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0
+                    0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0
+                    01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36
+                    8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184
+                    3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793
+                    1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663
+                    3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                  </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="ВКонтакте MORNING FOG">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24
+                    8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.391 0
+                    15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356
+                    0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846
+                    0-3.896-1.118-5.335-3.202C4.624 10.857 4.03 8.57 4.03 8.096c0-.254.102-.491.593-.491h1.744c.44
+                    0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0
+                    .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.203.17-.407.44-.407h2.744c.373
+                    0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0
+                    .407-.136.813-.542 1.254-1.406 2.151-3.574
+                    2.151-3.574.119-.254.322-.491.762-.491h1.744c.525 0
+                    .643.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0
+                    .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473
+                    2.05.17.49-.085.745-.576.745z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Форма -->
+          <div class="contacts__form-wrap reveal" style="--delay:.2s">
+            <form class="contact-form" id="contactForm" novalidate>
+              <h3 class="contact-form__title">Напишите нам</h3>
+              <div class="form-group">
+                <label for="fieldName" class="form-label">Ваше имя *</label>
+                <input type="text" id="fieldName" name="name" class="form-input"
+                       placeholder="Иван Иванов" autocomplete="name" required/>
+                <span class="form-error" id="nameError"></span>
+              </div>
+              <div class="form-group">
+                <label for="fieldEmail" class="form-label">Email *</label>
+                <input type="email" id="fieldEmail" name="email" class="form-input"
+                       placeholder="ivan@example.com" autocomplete="email" required/>
+                <span class="form-error" id="emailError"></span>
+              </div>
+              <div class="form-group">
+                <label for="fieldPhone" class="form-label">Телефон</label>
+                <input type="tel" id="fieldPhone" name="phone" class="form-input"
+                       placeholder="+7 (___) ___-__-__" autocomplete="tel"/>
+              </div>
+              <div class="form-group">
+                <label for="fieldMessage" class="form-label">Сообщение *</label>
+                <textarea id="fieldMessage" name="message" class="form-input form-textarea"
+                          placeholder="Ваше сообщение..." rows="4" required></textarea>
+                <span class="form-error" id="messageError"></span>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full">
+                Отправить сообщение
+              </button>
+              <div class="form-success" id="formSuccess" aria-live="polite">
+                <div class="form-success__icon">✅</div>
+                <p>Спасибо! Мы свяжемся с вами в ближайшее время ☕</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ ФУТЕР ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="#hero" class="footer__logo">☕ MORNING FOG</a>
+          <p class="footer__tagline">«Каждое утро начинается здесь»</p>
+        </div>
+        <nav class="footer__nav" aria-label="Навигация футера">
+          <a href="#about">О нас</a>
+          <a href="#menu">Меню</a>
+          <a href="#atmosphere">Атмосфера</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+        <div class="footer__legal">
+          <p class="footer__copy">© 2024 MORNING FOG. Все права защищены.</p>
+          <div class="footer__links">
+            <a href="#">Политика конфиденциальности</a>
+            <span>·</span>
+            <a href="#">Публичная оферта</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
